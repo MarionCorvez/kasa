@@ -1,8 +1,8 @@
-import reactLogo from '../assets/react.svg'
-import viteLogo from '/vite.svg'
+import { NavLink } from "react-router-dom";
+import reactLogo from "../assets/react.svg";
+import viteLogo from "/vite.svg";
 
-export function Header() {
-
+export default function Header() {
   return (
     <>
       <header>
@@ -14,9 +14,15 @@ export function Header() {
             <img src={reactLogo} className="logo react" alt="React logo" />
           </a>
         </div>
-      <h1>Vite +++ React</h1>
+        <nav>
+          <NavLink to="/" className="nav__link">
+            Accueil
+          </NavLink>
+          <NavLink to="/a-propos" className="nav__link">
+            A propos
+          </NavLink>
+        </nav>
       </header>
     </>
-  )
-
+  );
 }

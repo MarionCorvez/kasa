@@ -1,5 +1,4 @@
 export function Footer() {
-
   return (
     <>
       <footer>
@@ -8,6 +7,5 @@ export function Footer() {
         </p>
       </footer>
     </>
-  )
-
+  );
 }

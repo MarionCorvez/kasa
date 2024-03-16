@@ -6,3 +6,15 @@
 
 /* $Variables
    ==================================== */
+
+.nav__link {
+  color: #000;
+}
+
+.nav__link:hover {
+  color: #00a8ff;
+}
+
+.nav__link.active {
+  color: #00a8ff;
+}
