@@ -8,7 +8,6 @@
 ![react][react-badge]
 ![sass][sass-badge]
 ![vscode][vscode-badge]
-![w3c][w3c-badge]
 
 ## Scénario
 
@@ -22,7 +21,7 @@ Avec plus de 500 annonces postées chaque jour, Kasa fait partie des leaders de 
 0. [x] Étape 0 : Configuration du repository GitHub
 1. [x] Étape 1 : Initialisation du projet
 2. [x] Étape 2 : Ajout de React Router
-3. [ ] Étape 3 : Création du routeur et des différentes pages de l'application
+3. [x] Étape 3 : Création du routeur et des différentes pages de l'application
 4. [ ] Étape 4 : Création de la page d'accueil
 5. [ ] Étape 5 : Création de la page À propos
 6. [x] Étape 6 : Création de la page d'erreur
@@ -49,8 +48,3 @@ Avec plus de 500 annonces postées chaque jour, Kasa fait partie des leaders de 
 [javascript-badge]: https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black
 [react-badge]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
 [vscode-badge]: https://img.shields.io/badge/Made%20with-VSCode-1f425f.svg?style=for-the-badge&logoColor=white
-[w3c-badge]: https://img.shields.io/w3c-validation/default?style=for-the-badge&logoColor=white&targetUrl=https%3A%2F%2Fkasa-vza.netlify.app
-[linkedin-badge]: https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white
-[linkedin-url]: https://www.linkedin.com/in/vzamboulingame
-[github-badge]: https://img.shields.io/badge/GitHub-0a0a0a?style=for-the-badge&logo=github&logoColor=white
-[github-url]: https://github.com/vzamboulingame
