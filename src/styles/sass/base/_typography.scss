@@ -7,4 +7,108 @@
 /* $Variables
    ==================================== */
 
-@use '../abstracts' as a;
+@use "../abstracts" as a;
+
+// Texts using Montserrat-Medium font
+
+@font-face {
+  font-family: "Montserrat-Medium";
+  font-weight: 400;
+  src: local("Montserrat-Medium"), url("../assets/fonts/Montserrat-Medium.ttf");
+  font-display: swap; // Ensure text remains visible during webfont load
+}
+
+@font-face {
+  font-family: "Montserrat-Bold";
+  font-weight: 700;
+  src: local("Montserrat-Bold"), url("../assets/fonts/Montserrat-Bold.ttf");
+  font-display: swap; // Ensure text remains visible during webfont load
+}
+
+body {
+  background-color: a.$white;
+  color: a.$black;
+  font-family: "Montserrat-Medium", serif;
+  font-size: var(--f-size-m);
+  line-height: var(--l-height);
+}
+
+:root {
+  --f-size-xs: clamp(0.625rem, 0.455vw + 0.511rem, 0.875rem); // house tags
+  --f-size-s: clamp(0.75rem, 0.682vw + 0.58rem, 1.125rem); // housing location
+  --f-size-m: clamp(0.75rem, 1.364vw + 0.409rem, 1.5rem); // body
+  --f-size-l: clamp(1.125rem, 2.045vw + 0.614rem, 2.25rem); // housing title
+  --f-size-xl: clamp(1.5rem, 2.727vw + 0.818rem, 3rem); // home title
+  --f-size-xxl: clamp(6rem, 21.818vw + 0.545rem, 18rem); // 404 title
+  --l-height: 1.1;
+}
+
+// housing tag bold 10 - 12 - 14 $white
+
+// --f-size-s / tester harmonisation
+// housing location medium 12 - 15 - 18 $red
+// housing collapse bold 13 - 15 - 18 $white
+// housing paris $black medium 14 - 16 - 18
+// 404 link medium 14 - 16 - 18 $black
+
+// --f-size-m
+// text nav ($black) / footer ($white) medium : 12 - 18 - 24
+// about collapse bold 13 - 18 - 24 $white (tester body)
+// housing title bold 18 - 18 - 18 $white (tester body)
+// housing collapse content
+
+// h1 housing medium 18 - 27 - 36 $red
+// 404 details medium 18 - 27 - 36 $red
+
+// h1 bold 24 - 36 - 48 $white
+.heading-1 {
+  color: a.$white;
+  font-size: var(--f-size-xl);
+  font-weight: 700;
+  text-align: center;
+}
+
+// 404 h1 bold 96 - 192 - 288 $red
+
+.house {
+  &__title {
+  }
+  &__cover {
+  }
+  &__pictures {
+  }
+  &__description-title {
+  }
+  &__description-content {
+  }
+  &__host-name {
+  }
+  &__host-picture {
+  }
+  &__rating {
+  }
+  &__location {
+  }
+  &__equipments-title {
+  }
+  &__equipments-content {
+  }
+  &__tags {
+    font-size: var(--f-size-xs);
+    font-weight: 700;
+    color: a.$white;
+  }
+}
+
+.logo {
+  //color: a.$cod-gray;
+
+  &--header {
+    font-size: 30px;
+  }
+
+  &--footer {
+    //color: a.$white;
+    font-size: 18px;
+  }
+}

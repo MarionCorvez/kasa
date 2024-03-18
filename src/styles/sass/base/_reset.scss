@@ -4,5 +4,68 @@
   ========================================
 */
 
-/* $Variables
-   ==================================== */
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+  text-size-adjust: none;
+  scroll-behavior: smooth;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+}
+
+/* Inherit font on Form Elements for a Better Mobile Experience */
+h1,
+input,
+button,
+select,
+textarea,
+::placeholder {
+  font: inherit;
+  font-size: var(--f-size-m);
+  color: currentColor;
+  opacity: 1; /* Fix Firefox default style */
+}
+
+a,
+button {
+  all: unset;
+  cursor: pointer;
+}
+
+ol,
+ul,
+menu {
+  list-style: none;
+  padding: 0;
+}
+
+/* Style broken images */
+img,
+img::before,
+img::after {
+  position: relative;
+  vertical-align: middle; // replaces display: block & removes extra space below image
+  // shape-margin: 1rem; // space for float
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  max-width: 100%;
+  // height: auto; // maintain the aspect ratio
+  object-fit: cover;
+  text-align: center;
+  font: inherit;
+  font-style: italic; // for visibility of alt text for broken images
+}
+
+img::before {
+  content: "We're sorry, the image below is broken :(";
+}
+
+img::after {
+  content: "(url: " attr(src) ")";
+}

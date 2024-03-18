@@ -1,10 +1,14 @@
+import Accordion from "../components/Accordion.jsx";
+import BannerImage from "../components/Banner.jsx";
+import coverAbout from "../assets/images/cover-about.webp";
+
 export default function About() {
   return (
-    <section>
-      <h2>Fiabilité</h2>
-      <h2>Respect</h2>
-      <h2>Service</h2>
-      <h2>Sécurité</h2>
-    </section>
+    <main>
+      <section className="banner">
+        <BannerImage src={coverAbout} altText="Paysage de montagne" />
+      </section>
+      <Accordion />
+    </main>
   );
 }

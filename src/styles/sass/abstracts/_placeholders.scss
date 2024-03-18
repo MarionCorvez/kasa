@@ -1,0 +1,16 @@
+%flex--center {
+  display: flex;
+  justify-content: center;
+}
+
+%flex-a--center {
+  display: flex;
+  align-items: center;
+}
+
+main,
+%screen-main {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 20px;
+}

@@ -1,9 +1,19 @@
-export function Footer() {
+import { Link } from "react-router-dom";
+import kasaLogo from "../assets/logo.svg";
+
+export default function Footer() {
   return (
     <>
-      <footer>
-        <p className="read-the-docs">
-          Click on the Vite and React logos to learn more
+      <footer className="section-footer">
+        <Link to="/">
+          <img
+            src={kasaLogo}
+            className="section-footer__logo"
+            alt="Logo Kasa"
+          />
+        </Link>
+        <p className="section-footer__content">
+          © 2020 Kasa. All rights reserved
         </p>
       </footer>
     </>

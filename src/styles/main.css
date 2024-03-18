@@ -1,10 +1,84 @@
+.error, .section-footer, .section-header {
+  display: flex;
+  align-items: center;
+}
+
+main,
+.section-header {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
 /*
   ========================================
   $Reset
   ========================================
 */
-/* $Variables
-   ==================================== */
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+  text-size-adjust: none;
+  scroll-behavior: smooth;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+}
+
+/* Inherit font on Form Elements for a Better Mobile Experience */
+h1,
+input,
+button,
+select,
+textarea,
+::placeholder {
+  font: inherit;
+  font-size: var(--f-size-m);
+  color: currentColor;
+  opacity: 1; /* Fix Firefox default style */
+}
+
+a,
+button {
+  all: unset;
+  cursor: pointer;
+}
+
+ol,
+ul,
+menu {
+  list-style: none;
+  padding: 0;
+}
+
+/* Style broken images */
+img,
+img::before,
+img::after {
+  position: relative;
+  vertical-align: middle;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  max-width: 100%;
+  object-fit: cover;
+  text-align: center;
+  font: inherit;
+  font-style: italic;
+}
+
+img::before {
+  content: "We're sorry, the image below is broken :(";
+}
+
+img::after {
+  content: "(url: " attr(src) ")";
+}
+
 /*
   ========================================
   $Typography
@@ -12,25 +86,61 @@
 */
 /* $Variables
    ==================================== */
+@font-face {
+  font-family: "Montserrat-Medium";
+  font-weight: 400;
+  src: local("Montserrat-Medium"), url("../assets/fonts/Montserrat-Medium.ttf");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Montserrat-Bold";
+  font-weight: 700;
+  src: local("Montserrat-Bold"), url("../assets/fonts/Montserrat-Bold.ttf");
+  font-display: swap;
+}
+body {
+  background-color: #fff;
+  color: #000;
+  font-family: "Montserrat-Medium", serif;
+  font-size: var(--f-size-m);
+  line-height: var(--l-height);
+}
+
+:root {
+  --f-size-xs: clamp(0.625rem, 0.455vw + 0.511rem, 0.875rem);
+  --f-size-s: clamp(0.75rem, 0.682vw + 0.58rem, 1.125rem);
+  --f-size-m: clamp(0.75rem, 1.364vw + 0.409rem, 1.5rem);
+  --f-size-l: clamp(1.125rem, 2.045vw + 0.614rem, 2.25rem);
+  --f-size-xl: clamp(1.5rem, 2.727vw + 0.818rem, 3rem);
+  --f-size-xxl: clamp(6rem, 21.818vw + 0.545rem, 18rem);
+  --l-height: 1.1;
+}
+
+.heading-1 {
+  color: #fff;
+  font-size: var(--f-size-xl);
+  font-weight: 700;
+  text-align: center;
+}
+
+.house__tags {
+  font-size: var(--f-size-xs);
+  font-weight: 700;
+  color: #fff;
+}
+
+.logo--header {
+  font-size: 30px;
+}
+.logo--footer {
+  font-size: 18px;
+}
+
 /*
   ========================================
   $Base
   ========================================
 */
-/* $Variables
-   ==================================== */
-.nav__link {
-  color: #000;
-}
-
-.nav__link:hover {
-  color: #00a8ff;
-}
-
-.nav__link.active {
-  color: #00a8ff;
-}
-
 /*
   ========================================
   $Animations
@@ -50,17 +160,67 @@
   $Header
   ========================================
 */
-/* $Variables
-   ==================================== */
+.section-header {
+  padding-top: clamp(20px, 1.8em, 45px);
+  padding-bottom: clamp(27px, 2.2em, 50px);
+}
+.section-header__logo {
+  width: clamp(145px, 10em, 210px);
+  margin-right: 17px;
+}
+
+@media screen and (width >= 768px) {
+  .nav {
+    margin-left: auto;
+  }
+}
+.nav__link {
+  padding-left: clamp(20px, 2em, 58px);
+  color: currentColor;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+@media screen and (width >= 768px) {
+  .nav__link {
+    text-transform: none;
+  }
+}
+.nav__link:hover, .nav__link.active {
+  text-decoration: underline;
+}
+
 /*
   ========================================
   $Footer
   ========================================
 */
-/* $Variables
-   ==================================== */
-footer {
-  background-color: bisque;
+.section-footer {
+  flex-direction: column;
+  flex-wrap: wrap;
+  padding-top: 66px;
+  padding-bottom: 58px;
+  background-color: #000;
+  color: #fff;
+}
+@media screen and (width >= 768px) {
+  .section-footer {
+    padding-bottom: 29px;
+  }
+}
+.section-footer__logo {
+  width: 122px;
+  filter: brightness(100);
+}
+.section-footer__content {
+  max-width: 133px;
+  padding-top: 20px;
+  text-align: center;
+}
+@media screen and (width >= 768px) {
+  .section-footer__content {
+    max-width: 100%;
+    padding-top: 35px;
+  }
 }
 
 /*
@@ -68,33 +228,6 @@ footer {
   $Buttons
   ========================================
 */
-.tweet__container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-}
-
-.tweet {
-  position: relative;
-  width: fit-content;
-  min-width: 250px;
-  border: 1px solid #FFF7D4;
-  background-color: #9BB8CD;
-  padding: 1rem;
-}
-.tweet p {
-  margin: 1rem 0;
-}
-.tweet--delete {
-  position: absolute;
-  right: 0;
-  top: 0;
-  padding: 10px 15px;
-  background: none;
-  border: none;
-  cursor: pointer;
-}
-
 /*
   ========================================
   $Carousel
@@ -111,11 +244,25 @@ footer {
    ==================================== */
 /*
   ========================================
-  $Thumbnails
+  $Banner
   ========================================
 */
-/* $Variables
-   ==================================== */
+.banner {
+  position: relative;
+}
+.banner__image {
+  height: clamp(111px, 9.5em, 223px);
+  border-radius: 25px;
+  filter: brightness(70%);
+}
+.banner__heading {
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  left: 30%;
+  transform: translate(-20%, -50%);
+}
+
 /*
   ========================================
   $Dropdown
@@ -130,5 +277,37 @@ footer {
 */
 /* $Variables
    ==================================== */
+/*
+  ========================================
+  $Error
+  ========================================
+*/
+/* <main className="error">
+<h1 className="error__heading">404</h1>
+<p className="error__content">
+  Oups ! La page que vous demandez n'existe pas.
+</p>
+<Link to="/" className="error__link">
+  Retourner sur la page d'accueil
+</Link>
+</main> */
+.error {
+  flex-direction: column;
+  gap: clamp(90px, 7em, 139px);
+  padding: clamp(90px, 7em, 139px) 57px;
+  text-align: center;
+}
+.error__heading {
+  color: #ff6060;
+  font-size: var(--f-size-xxl);
+}
+.error__content {
+  color: #ff6060;
+  font-size: var(--f-size-m);
+}
+.error__link {
+  text-decoration: underline;
+  font-size: var(--f-size-s);
+}
 
 /*# sourceMappingURL=main.css.map */

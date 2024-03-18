@@ -1,0 +1,38 @@
+/*
+  ========================================
+  $Error
+  ========================================
+*/
+
+@use "../abstracts" as a;
+
+/* <main className="error">
+<h1 className="error__heading">404</h1>
+<p className="error__content">
+  Oups ! La page que vous demandez n'existe pas.
+</p>
+<Link to="/" className="error__link">
+  Retourner sur la page d'accueil
+</Link>
+</main> */
+
+.error {
+  @extend %flex-a--center;
+  flex-direction: column;
+  gap: clamp(90px, 7em, 139px);
+  padding: clamp(90px, 7em, 139px) 57px;
+  text-align: center;
+
+  &__heading {
+    color: a.$red;
+    font-size: var(--f-size-xxl);
+  }
+  &__content {
+    color: a.$red;
+    font-size: var(--f-size-m);
+  }
+  &__link {
+    text-decoration: underline;
+    font-size: var(--f-size-s);
+  }
+}

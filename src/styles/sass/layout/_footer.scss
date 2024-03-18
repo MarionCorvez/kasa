@@ -4,9 +4,33 @@
   ========================================
 */
 
-/* $Variables
-   ==================================== */
+@use "../abstracts" as a;
 
-footer {
-  background-color: bisque;
+.section-footer {
+  @extend %flex-a--center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  padding-top: 66px;
+  padding-bottom: 58px;
+  background-color: a.$black;
+  color: a.$white;
+
+  @include a.bp(medium) {
+    padding-bottom: 29px;
+  }
+
+  &__logo {
+    width: 122px;
+    filter: brightness(100);
+  }
+
+  &__content {
+    max-width: 133px;
+    padding-top: 20px;
+    text-align: center;
+    @include a.bp(medium) {
+      max-width: 100%;
+      padding-top: 35px;
+    }
+  }
 }

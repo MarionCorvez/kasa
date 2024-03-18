@@ -1,0 +1,22 @@
+/*
+  ========================================
+  $Banner
+  ========================================
+*/
+
+.banner {
+  position: relative;
+  &__image {
+    height: clamp(111px, 9.5em, 223px);
+    border-radius: 25px;
+    filter: brightness(70%);
+  }
+
+  &__heading {
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    left: 30%;
+    transform: translate(-20%, -50%);
+  }
+}

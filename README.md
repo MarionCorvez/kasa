@@ -1,15 +1,56 @@
+<a name="readme-top"></a>
+
 # Kasa
+
+![html][html5-badge]
+![css][css3-badge]
+![javascript][javascript-badge]
+![react][react-badge]
+![sass][sass-badge]
+![vscode][vscode-badge]
+![w3c][w3c-badge]
+
+## Scénario
+
+Vous êtes développeur front-end en freelance pour Kasa, une entreprise de location d’appartements entre particuliers.
+Avec plus de 500 annonces postées chaque jour, Kasa fait partie des leaders de la location d’appartements entre particuliers en France.
+
+![Logo Kasa](https://user.oc-static.com/upload/2022/06/24/16560899769906_FR_811_P8_Banner-Kasa%20%281%29.png)
 
 ## Étapes
 
-0. [X] Étape 0 : Configuration du repository GitHub
-1. [X] Étape 1 : Initialisation du projet
-2. [ ] Étape 2 : Ajout de React Router
+0. [x] Étape 0 : Configuration du repository GitHub
+1. [x] Étape 1 : Initialisation du projet
+2. [x] Étape 2 : Ajout de React Router
 3. [ ] Étape 3 : Création du routeur et des différentes pages de l'application
 4. [ ] Étape 4 : Création de la page d'accueil
 5. [ ] Étape 5 : Création de la page À propos
-6. [ ] Étape 6 : Création de la page d'erreur
+6. [x] Étape 6 : Création de la page d'erreur
 7. [ ] Étape 7 : Création du carrousel de la page de logement
 8. [ ] Étape 8 : Finalisation de la page de logement
 9. [ ] Étape 9 : Gestion de l'erreur sur l'id d'une propriété
 10. [ ] Étape 10 : Vérification de l'ensemble du site
+
+## Objectifs pédagogiques
+
+- Configurer la navigation entre les pages de l'application avec React Router
+- Développer des éléments de l'interface d'un site web grâce à des composants React
+- Mettre en œuvre des animations CSS
+- Développer une interface web avec Sass
+- Initialiser une application avec Create React App
+
+<p align="right"><a href="#readme-top">back to top</a></p>
+
+<!-- BADGE LINKS -->
+
+[html5-badge]: https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white
+[css3-badge]: https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white
+[sass-badge]: https://img.shields.io/badge/Sass-CC6699?style=for-the-badge&logo=sass&logoColor=white
+[javascript-badge]: https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black
+[react-badge]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
+[vscode-badge]: https://img.shields.io/badge/Made%20with-VSCode-1f425f.svg?style=for-the-badge&logoColor=white
+[w3c-badge]: https://img.shields.io/w3c-validation/default?style=for-the-badge&logoColor=white&targetUrl=https%3A%2F%2Fkasa-vza.netlify.app
+[linkedin-badge]: https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white
+[linkedin-url]: https://www.linkedin.com/in/vzamboulingame
+[github-badge]: https://img.shields.io/badge/GitHub-0a0a0a?style=for-the-badge&logo=github&logoColor=white
+[github-url]: https://github.com/vzamboulingame
