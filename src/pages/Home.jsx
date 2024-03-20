@@ -1,4 +1,6 @@
 import BannerImage from "../components/Banner.jsx";
+import Gallery from "../components/Gallery.jsx";
+
 import coverHome from "../assets/images/cover-home.webp";
 
 export default function Home() {
@@ -10,6 +12,7 @@ export default function Home() {
         </h1>
         <BannerImage src={coverHome} altText="Montagnes au-dessus de la mer" />
       </section>
+      <Gallery />
     </main>
   );
 }

@@ -4,12 +4,17 @@
   ========================================
 */
 
-/* $Variables
-   ==================================== */
-
 @use "../abstracts" as a;
 
-// Texts using Montserrat-Medium font
+:root {
+  --f-size-xs: clamp(0.625rem, 0.455vw + 0.511rem, 0.875rem); // house tags
+  --f-size-s: clamp(0.75rem, 0.682vw + 0.58rem, 1.125rem); // housing location
+  --f-size-m: clamp(0.75rem, 1.364vw + 0.409rem, 1.5rem); // body
+  --f-size-l: clamp(1.125rem, 2.045vw + 0.614rem, 2.25rem); // housing title
+  --f-size-xl: clamp(1.5rem, 2.727vw + 0.818rem, 3rem); // home title
+  --f-size-xxl: clamp(6rem, 21.818vw + 0.545rem, 18rem); // 404 title
+  --l-height: 1.4;
+}
 
 @font-face {
   font-family: "Montserrat-Medium";
@@ -31,16 +36,6 @@ body {
   font-family: "Montserrat-Medium", serif;
   font-size: var(--f-size-m);
   line-height: var(--l-height);
-}
-
-:root {
-  --f-size-xs: clamp(0.625rem, 0.455vw + 0.511rem, 0.875rem); // house tags
-  --f-size-s: clamp(0.75rem, 0.682vw + 0.58rem, 1.125rem); // housing location
-  --f-size-m: clamp(0.75rem, 1.364vw + 0.409rem, 1.5rem); // body
-  --f-size-l: clamp(1.125rem, 2.045vw + 0.614rem, 2.25rem); // housing title
-  --f-size-xl: clamp(1.5rem, 2.727vw + 0.818rem, 3rem); // home title
-  --f-size-xxl: clamp(6rem, 21.818vw + 0.545rem, 18rem); // 404 title
-  --l-height: 1.1;
 }
 
 // housing tag bold 10 - 12 - 14 $white
@@ -97,18 +92,5 @@ body {
     font-size: var(--f-size-xs);
     font-weight: 700;
     color: a.$white;
-  }
-}
-
-.logo {
-  //color: a.$cod-gray;
-
-  &--header {
-    font-size: 30px;
-  }
-
-  &--footer {
-    //color: a.$white;
-    font-size: 18px;
   }
 }

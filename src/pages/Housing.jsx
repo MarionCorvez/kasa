@@ -20,7 +20,7 @@ export default function Housing() {
   return (
     <>
       {
-        // use data State Variable For Get Data Use JavaScript Map Mathod
+        // use data State Variable For Get Data Use JavaScript Map Method
         data
           ? data.map(function (data) {
               return (

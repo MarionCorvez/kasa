@@ -84,8 +84,16 @@ img::after {
   $Typography
   ========================================
 */
-/* $Variables
-   ==================================== */
+:root {
+  --f-size-xs: clamp(0.625rem, 0.455vw + 0.511rem, 0.875rem);
+  --f-size-s: clamp(0.75rem, 0.682vw + 0.58rem, 1.125rem);
+  --f-size-m: clamp(0.75rem, 1.364vw + 0.409rem, 1.5rem);
+  --f-size-l: clamp(1.125rem, 2.045vw + 0.614rem, 2.25rem);
+  --f-size-xl: clamp(1.5rem, 2.727vw + 0.818rem, 3rem);
+  --f-size-xxl: clamp(6rem, 21.818vw + 0.545rem, 18rem);
+  --l-height: 1.4;
+}
+
 @font-face {
   font-family: "Montserrat-Medium";
   font-weight: 400;
@@ -106,16 +114,6 @@ body {
   line-height: var(--l-height);
 }
 
-:root {
-  --f-size-xs: clamp(0.625rem, 0.455vw + 0.511rem, 0.875rem);
-  --f-size-s: clamp(0.75rem, 0.682vw + 0.58rem, 1.125rem);
-  --f-size-m: clamp(0.75rem, 1.364vw + 0.409rem, 1.5rem);
-  --f-size-l: clamp(1.125rem, 2.045vw + 0.614rem, 2.25rem);
-  --f-size-xl: clamp(1.5rem, 2.727vw + 0.818rem, 3rem);
-  --f-size-xxl: clamp(6rem, 21.818vw + 0.545rem, 18rem);
-  --l-height: 1.1;
-}
-
 .heading-1 {
   color: #fff;
   font-size: var(--f-size-xl);
@@ -127,13 +125,6 @@ body {
   font-size: var(--f-size-xs);
   font-weight: 700;
   color: #fff;
-}
-
-.logo--header {
-  font-size: 30px;
-}
-.logo--footer {
-  font-size: 18px;
 }
 
 /*
@@ -230,6 +221,46 @@ body {
 */
 /*
   ========================================
+  $Gallery
+  ========================================
+*/
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
+  gap: 20px;
+  margin: clamp(20px, 1.75em, 43px) 0 clamp(27px, 2em, 50px);
+}
+@media screen and (width >= 768px) {
+  .gallery {
+    row-gap: 60px;
+    column-gap: 50px;
+    padding: 56px 50px 43px;
+    border-radius: 25px;
+    background-color: #f6f6f6;
+  }
+}
+
+.card {
+  position: relative;
+}
+.card__title {
+  position: absolute;
+  z-index: 1;
+  bottom: 20px;
+  left: 15px;
+  margin-right: 50px;
+  font-size: var(--f-size-s);
+  font-weight: 700;
+  color: #fff;
+  text-shadow: 1px 1px #000;
+}
+.card__cover {
+  border-radius: 10px;
+  height: clamp(255px, 18em, 340px);
+}
+
+/*
+  ========================================
   $Carousel
   ========================================
 */
@@ -265,11 +296,57 @@ body {
 
 /*
   ========================================
-  $Dropdown
+  $Accordion
   ========================================
 */
-/* $Variables
-   ==================================== */
+.container {
+  max-width: 1023px;
+  margin: 0 auto;
+  padding: clamp(19px, 2em, 38px) 0;
+  display: flex;
+  flex-direction: column;
+  gap: clamp(20px, 2em, 30px);
+}
+
+.wrapper {
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.wrapper .title-container {
+  width: 100%;
+  padding: 10px 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #ff6060;
+  color: #fff;
+  font-size: var(--f-size-m);
+  font-weight: 700;
+}
+
+.wrapper .arrow {
+  width: 16px;
+  padding-right: 30px;
+  transition: 0.3s ease-in-out;
+}
+
+.arrow.active {
+  padding-right: 30px;
+  rotate: 180deg;
+  transform: translate(30px);
+}
+
+.wrapper .details-container {
+  background-color: #f6f6f6;
+  transition: height 0.3s ease-in-out;
+}
+
+.wrapper .details-content {
+  padding: 20px;
+  font-size: var(--f-size-s);
+}
+
 /*
   ========================================
   $Home

@@ -22,7 +22,7 @@ Avec plus de 500 annonces postées chaque jour, Kasa fait partie des leaders de 
 1. [x] Étape 1 : Initialisation du projet
 2. [x] Étape 2 : Ajout de React Router
 3. [x] Étape 3 : Création du routeur et des différentes pages de l'application
-4. [ ] Étape 4 : Création de la page d'accueil
+4. [x] Étape 4 : Création de la page d'accueil
 5. [ ] Étape 5 : Création de la page À propos
 6. [x] Étape 6 : Création de la page d'erreur
 7. [ ] Étape 7 : Création du carrousel de la page de logement

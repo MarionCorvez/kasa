@@ -1,7 +1,7 @@
 import { Routes, Route } from "react-router-dom";
 import Home from "./pages/Home/";
 import About from "./pages/About/";
-import Housing from "./pages/Housing/";
+import House from "./pages/House/";
 import NotFound from "./pages/NotFound/";
 
 export default function Router() {
@@ -10,7 +10,7 @@ export default function Router() {
       <Routes>
         <Route exact path="/" element={<Home />} />
         <Route path="/a-propos" element={<About />} />
-        <Route path="/logement" element={<Housing />} />
+        <Route path="/logements/:id" element={<House />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </>
