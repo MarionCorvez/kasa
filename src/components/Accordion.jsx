@@ -1,4 +1,4 @@
-import AccordionData from "../data/AccordionData.js";
+import AccordionData from "../../public/data/AccordionData.js";
 import React, { useRef, useState } from "react";
 import Arrow from "../assets/arrow.svg";
 

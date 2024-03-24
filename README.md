@@ -4,9 +4,9 @@
 
 ![html][html5-badge]
 ![css][css3-badge]
+![sass][sass-badge]
 ![javascript][javascript-badge]
 ![react][react-badge]
-![sass][sass-badge]
 ![vscode][vscode-badge]
 
 ## Scénario
@@ -23,7 +23,7 @@ Avec plus de 500 annonces postées chaque jour, Kasa fait partie des leaders de 
 2. [x] Étape 2 : Ajout de React Router
 3. [x] Étape 3 : Création du routeur et des différentes pages de l'application
 4. [x] Étape 4 : Création de la page d'accueil
-5. [ ] Étape 5 : Création de la page À propos
+5. [x] Étape 5 : Création de la page À propos
 6. [x] Étape 6 : Création de la page d'erreur
 7. [ ] Étape 7 : Création du carrousel de la page de logement
 8. [ ] Étape 8 : Finalisation de la page de logement
