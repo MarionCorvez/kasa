@@ -25,9 +25,9 @@ Avec plus de 500 annonces postées chaque jour, Kasa fait partie des leaders de 
 4. [x] Étape 4 : Création de la page d'accueil
 5. [x] Étape 5 : Création de la page À propos
 6. [x] Étape 6 : Création de la page d'erreur
-7. [ ] Étape 7 : Création du carrousel de la page de logement
-8. [ ] Étape 8 : Finalisation de la page de logement
-9. [ ] Étape 9 : Gestion de l'erreur sur l'id d'une propriété
+7. [x] Étape 7 : Gestion de l'erreur sur l'id d'une propriété
+8. [ ] Étape 8 : Création de la page de logement
+9. [ ] Étape 9 : Création du carrousel de la page de logement
 10. [ ] Étape 10 : Vérification de l'ensemble du site
 
 ## Objectifs pédagogiques
