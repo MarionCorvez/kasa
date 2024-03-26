@@ -1,0 +1,50 @@
+/*
+  ========================================
+  $House
+  ========================================
+*/
+
+@use "../abstracts" as a;
+
+.house {
+  &__title {
+  }
+  &__cover {
+  }
+  &__pictures {
+  }
+  &__description-title {
+  }
+  &__description-content {
+  }
+  &__host-name {
+  }
+  &__host-picture {
+  }
+  &__rating {
+  }
+  &__location {
+  }
+  &__equipments-title {
+  }
+  &__equipments-content {
+  }
+  &__tags {
+    font-size: var(--f-size-xs);
+    font-weight: 700;
+    color: a.$white;
+    background-color: a.$red;
+  }
+}
+
+/* house;
+__title;
+__cover;
+__pictures;
+__description;
+__host - name;
+__host - picture;
+__rating;
+__location;
+__equipments;
+__tags; */

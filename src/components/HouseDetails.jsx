@@ -1,22 +1,34 @@
-import data from "../../public/data/data.json";
-import { useParams, Navigate } from "react-router-dom";
+export default function HouseDetails({ item }) {
+  return (
+    <section className="house" key={item.id}>
+      <h1 className="house__title">{item.title}</h1>
+      <p className="house__location">{item.location}</p>
 
-export default function HouseDetails() {
-  let { id } = useParams();
+      <ul className="house__tags">
+        {item.tags.map((tag) => (
+          <li key={tag.toString()} className="house__tag">
+            {tag}
+          </li>
+        ))}
+      </ul>
 
-  const house = data.find((house) => house.id === id);
-  if (house) {
-    return (
-      <>
-        <h2>Ici la fiche logement</h2>
-        <div key={house.id}>
-          <h3>{house.title}</h3>
-          <p>{house.description}</p>
-          <img src={house.cover} alt={house.title} className="house__cover" />
-        </div>
-      </>
-    );
-  } else {
-    return <Navigate to="/404" />;
-  }
+      <div className="house__rating">{item.rating}</div>
+      <div className="house__host">
+        <p className="house__host-name">{item.host.name}</p>
+        <img
+          src={item.host.picture}
+          alt={item.host.name}
+          className="house__host-picture"
+        />
+      </div>
+      <p className="house__description">{item.description}</p>
+      <ul className="house__equipments">
+        {item.equipments.map((equipment) => (
+          <li key={equipment.toString()} className="house__equipment">
+            {equipment}
+          </li>
+        ))}
+      </ul>
+    </section>
+  );
 }

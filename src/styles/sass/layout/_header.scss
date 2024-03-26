@@ -17,23 +17,3 @@
     margin-right: 17px;
   }
 }
-
-.nav {
-  @include a.bp(medium) {
-    margin-left: auto;
-  }
-
-  &__link {
-    padding-left: clamp(20px, 2em, 58px);
-    color: currentColor;
-    text-decoration: none;
-    text-transform: uppercase;
-    @include a.bp(medium) {
-      text-transform: none;
-    }
-    &:hover,
-    &.active {
-      text-decoration: underline;
-    }
-  }
-}

@@ -17,7 +17,7 @@ main,
 */
 html {
   box-sizing: border-box;
-  font-size: 16px;
+  font-size: 14px;
   text-size-adjust: none;
   scroll-behavior: smooth;
 }
@@ -121,12 +121,6 @@ body {
   text-align: center;
 }
 
-.house__tags {
-  font-size: var(--f-size-xs);
-  font-weight: 700;
-  color: #fff;
-}
-
 /*
   ========================================
   $Base
@@ -144,22 +138,6 @@ body {
   $Navigation
   ========================================
 */
-/* $Variables
-   ==================================== */
-/*
-  ========================================
-  $Header
-  ========================================
-*/
-.section-header {
-  padding-top: clamp(20px, 1.8em, 45px);
-  padding-bottom: clamp(27px, 2.2em, 50px);
-}
-.section-header__logo {
-  width: clamp(145px, 10em, 210px);
-  margin-right: 17px;
-}
-
 @media screen and (width >= 768px) {
   .nav {
     margin-left: auto;
@@ -178,6 +156,20 @@ body {
 }
 .nav__link:hover, .nav__link.active {
   text-decoration: underline;
+}
+
+/*
+  ========================================
+  $Header
+  ========================================
+*/
+.section-header {
+  padding-top: clamp(20px, 1.8em, 45px);
+  padding-bottom: clamp(27px, 2.2em, 50px);
+}
+.section-header__logo {
+  width: clamp(145px, 10em, 210px);
+  margin-right: 17px;
 }
 
 /*
@@ -261,18 +253,50 @@ body {
 
 /*
   ========================================
-  $Carousel
+  $Slider
   ========================================
 */
-/* $Variables
-   ==================================== */
-/*
-  ========================================
-  $Cover
-  ========================================
-*/
-/* $Variables
-   ==================================== */
+.slider {
+  position: relative;
+  margin-bottom: clamp(15px, 1.5em, 30px);
+  border-radius: clamp(10px, 1.15em, 25px);
+}
+.slider__picture {
+  height: clamp(255px, 20em, 415px);
+  border-radius: clamp(10px, 1.15em, 25px);
+}
+.slider__nav {
+  display: none;
+}
+@media screen and (width >= 768px) {
+  .slider__nav {
+    display: block;
+    position: absolute;
+    left: 48%;
+    bottom: 25px;
+    z-index: 3;
+    font-size: var(--f-size-s);
+    text-shadow: 1px 1px #000;
+    color: #fff;
+  }
+}
+.slider__arrow {
+  position: absolute;
+  z-index: 1;
+  top: 40%;
+  width: clamp(12px, 1.85em, 45px);
+  padding: 5px;
+  cursor: pointer;
+  filter: drop-shadow(1px 2px 2px rgba(0, 0, 0, 0.4));
+}
+.slider__arrow--left {
+  left: clamp(6px, 0.85em, 24px);
+}
+.slider__arrow--right {
+  right: clamp(6px, 0.85em, 24px);
+  transform: rotate(180deg);
+}
+
 /*
   ========================================
   $Banner

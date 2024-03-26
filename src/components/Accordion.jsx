@@ -1,6 +1,6 @@
 import AccordionData from "../../public/data/AccordionData.js";
 import React, { useRef, useState } from "react";
-import Arrow from "../assets/arrow.svg";
+import Arrow from "../assets/arrow-up.svg";
 
 //  accordionitem component
 const AccordionItem = ({ title, content, isOpen, onClick }) => {

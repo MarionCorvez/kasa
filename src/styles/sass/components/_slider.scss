@@ -1,0 +1,49 @@
+/*
+  ========================================
+  $Slider
+  ========================================
+*/
+
+@use "../abstracts" as a;
+
+.slider {
+  position: relative;
+  margin-bottom: clamp(15px, 1.5em, 30px);
+  border-radius: clamp(10px, 1.15em, 25px);
+
+  &__picture {
+    height: clamp(255px, 20em, 415px);
+    border-radius: clamp(10px, 1.15em, 25px);
+  }
+
+  &__nav {
+    display: none;
+    @include a.bp(medium) {
+      display: block;
+      position: absolute;
+      left: 48%;
+      bottom: 25px;
+      z-index: 3;
+      font-size: var(--f-size-s);
+      text-shadow: 1px 1px a.$black;
+      color: a.$white;
+    }
+  }
+
+  &__arrow {
+    position: absolute;
+    z-index: 1;
+    top: 40%;
+    width: clamp(12px, 1.85em, 45px);
+    padding: 5px;
+    cursor: pointer;
+    filter: drop-shadow(1px 2px 2px rgb(0 0 0 / 0.4));
+    &--left {
+      left: clamp(6px, 0.85em, 24px);
+    }
+    &--right {
+      right: clamp(6px, 0.85em, 24px);
+      transform: rotate(180deg);
+    }
+  }
+}
