@@ -1,0 +1,59 @@
+/*
+  ========================================
+  $Accordion
+  ========================================
+*/
+
+@use "../../styles/sass/abstracts/" as a;
+
+.section-accordion {
+  max-width: 1023px;
+  margin: 0 auto;
+  padding: clamp(19px, 2em, 38px) 0;
+  @extend %flex-column;
+  gap: clamp(20px, 2em, 30px);
+}
+
+.accordion {
+  border-radius: 5px;
+  overflow: hidden;
+  flex: 1;
+
+  &__title-wrapper {
+    cursor: pointer;
+    width: 100%;
+    padding: 10px 15px;
+    @extend %flex-a--center;
+    justify-content: space-between;
+    background-color: a.$red;
+    color: a.$white;
+    font-size: var(--f-size-m);
+    font-weight: 700;
+  }
+  &__details-wrapper {
+    background-color: a.$gray;
+    transition: max-height 0.3s ease-in-out;
+    max-height: 0px;
+  }
+  &__details-content {
+    padding: 20px;
+    background-color: a.$gray;
+    font-size: var(--f-size-s);
+  }
+}
+
+.accordion .accordion__arrow {
+  width: 45px;
+  padding-right: 20px;
+  transition: 0.3s ease-in-out;
+}
+
+.accordion__arrow.active {
+  rotate: 180deg;
+  transform: translate(20px);
+}
+
+.accordion__details-wrapper.open {
+  max-height: 200px;
+  transition: all 0.3s ease-in;
+}

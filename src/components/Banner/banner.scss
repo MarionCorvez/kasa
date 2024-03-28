@@ -4,6 +4,8 @@
   ========================================
 */
 
+@use "../../styles/sass/abstracts/" as a;
+
 .banner {
   position: relative;
   &__image {

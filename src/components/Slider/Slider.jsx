@@ -1,5 +1,5 @@
 import { useState } from "react";
-import Arrow from "../assets/arrow-left.svg";
+import Arrow from "../../assets/images/arrow-left.svg";
 
 export default function Slider({ item }) {
   const [index, setIndex] = useState(0);

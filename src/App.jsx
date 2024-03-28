@@ -1,7 +1,7 @@
 import "./styles/main.css";
 import Router from "./Router";
-import Header from "./components/Header.jsx";
-import Footer from "./components/Footer.jsx";
+import Header from "./components/Header/Header.jsx";
+import Footer from "./components/Footer/Footer.jsx";
 
 function App() {
   return (

@@ -1,8 +1,8 @@
 import { Routes, Route, Navigate } from "react-router-dom";
-import Home from "./pages/Home/";
-import About from "./pages/About/";
-import House from "./pages/House/";
-import NotFound from "./pages/NotFound/";
+import Home from "./pages/Home/Home.jsx";
+import About from "./pages/About/About.jsx";
+import House from "./pages/House/House.jsx";
+import NotFound from "./pages/NotFound/NotFound.jsx";
 
 export default function Router() {
   return (

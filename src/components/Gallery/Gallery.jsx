@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { useState } from "react";
-import { useFetch } from "../hooks/useFetch.jsx";
+import { useFetch } from "../../hooks/useFetch.jsx";
 
 export default function Gallery() {
   const [url, setUrl] = useState("../../data/data.json");

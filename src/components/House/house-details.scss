@@ -1,0 +1,88 @@
+/*
+  ========================================
+  $House
+  ========================================
+*/
+
+@use "../../styles/sass/abstracts/" as a;
+
+.house {
+  margin-bottom: clamp(27px, 2.25em, 50px);
+
+  &__properties {
+    padding-bottom: clamp(13px, 1em, 31px);
+    @include a.bp(medium) {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
+
+  &__hosting {
+    @extend %flex-a--center;
+    justify-content: space-between;
+    @include a.bp(medium) {
+      flex-direction: column;
+      gap: 20px;
+    }
+  }
+
+  &__features {
+    @extend %flex-column;
+    gap: clamp(20px, 2.75em, 76px);
+    @include a.bp(medium) {
+      flex-direction: row;
+    }
+  }
+
+  &__title {
+    font-size: var(--f-size-l);
+    color: a.$red;
+  }
+  &__location {
+    padding-top: 5px;
+    font-size: var(--f-size-s);
+  }
+
+  &__host {
+    @extend %flex-a--center;
+    gap: 10px;
+  }
+  &__host-name {
+    flex: 1;
+    font-size: var(--f-size-s);
+    color: a.$red;
+    text-align: right;
+  }
+  &__host-picture {
+    flex: 1;
+    width: clamp(32px, 5em, 64px);
+    border-radius: 50%;
+  }
+
+  &__rating {
+    @include a.bp(medium) {
+      order: 2;
+    }
+  }
+  &__star {
+    max-width: clamp(13px, 1.25em, 25px);
+    margin: clamp(6px, 0.4em, 10px);
+  }
+
+  &__tags {
+    display: flex;
+    gap: 10px;
+    padding: clamp(10px, 1.5em, 20px) 0;
+  }
+  &__tag {
+    width: 115px;
+    border-radius: 10px;
+    padding: 5px;
+    font-size: var(--f-size-xs);
+    font-weight: 700;
+    text-align: center;
+    color: a.$white;
+    background-color: a.$red;
+  }
+}

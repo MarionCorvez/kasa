@@ -1,7 +1,7 @@
-import BannerImage from "../components/Banner.jsx";
-import Gallery from "../components/Gallery.jsx";
+import BannerImage from "../../components/Banner/Banner.jsx";
+import Gallery from "../../components/Gallery/Gallery.jsx";
 
-import coverHome from "../assets/images/cover-home.webp";
+import coverHome from "../../assets/images/cover-home.webp";
 
 export default function Home() {
   return (
