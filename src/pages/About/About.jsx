@@ -1,5 +1,5 @@
 import BannerImage from "../../components/Banner/Banner.jsx";
-import coverAbout from "../../assets/images/cover-about.webp";
+import coverAbout from "/images/cover-about.webp";
 import Accordion from "../../components/Accordion/Accordion.jsx";
 import data from "../../../public/data/AccordionData.js";
 

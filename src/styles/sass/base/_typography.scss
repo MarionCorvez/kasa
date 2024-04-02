@@ -19,14 +19,14 @@
 @font-face {
   font-family: "Montserrat-Medium";
   font-weight: 400;
-  src: local("Montserrat-Medium"), url("../assets/fonts/Montserrat-Medium.ttf");
+  src: local("Montserrat-Medium"), url("../fonts/Montserrat-Medium.ttf");
   font-display: swap; // Ensure text remains visible during webfont load
 }
 
 @font-face {
   font-family: "Montserrat-Bold";
   font-weight: 700;
-  src: local("Montserrat-Bold"), url("../assets/fonts/Montserrat-Bold.ttf");
+  src: local("Montserrat-Bold"), url("../fonts/Montserrat-Bold.ttf");
   font-display: swap; // Ensure text remains visible during webfont load
 }
 
@@ -38,29 +38,9 @@ body {
   line-height: var(--l-height);
 }
 
-// housing tag bold 10 - 12 - 14 $white
-
-// --f-size-s / tester harmonisation
-// housing location medium 12 - 15 - 18 $red
-// housing collapse bold 13 - 15 - 18 $white
-// housing paris $black medium 14 - 16 - 18
-// 404 link medium 14 - 16 - 18 $black
-
-// --f-size-m
-// text nav ($black) / footer ($white) medium : 12 - 18 - 24
-// about collapse bold 13 - 18 - 24 $white (tester body)
-// housing title bold 18 - 18 - 18 $white (tester body)
-// housing collapse content
-
-// h1 housing medium 18 - 27 - 36 $red
-// 404 details medium 18 - 27 - 36 $red
-
-// h1 bold 24 - 36 - 48 $white
 .heading-1 {
   color: a.$white;
   font-size: var(--f-size-xl);
   font-weight: 700;
   text-align: center;
 }
-
-// 404 h1 bold 96 - 192 - 288 $red

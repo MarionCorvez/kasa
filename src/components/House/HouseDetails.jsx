@@ -1,5 +1,4 @@
 import Stars from "../Stars/Stars.jsx";
-import Accordion from "../Accordion/Accordion.jsx";
 
 export default function HouseDetails({ item }) {
   return (

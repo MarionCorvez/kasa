@@ -1,5 +1,5 @@
 import { useState } from "react";
-import Arrow from "../../assets/images/arrow-up.svg";
+import Arrow from "/images/arrow-up.svg";
 
 export default function Accordion({ title, content }) {
   const [showMore, setShowMore] = useState(false);
@@ -7,10 +7,6 @@ export default function Accordion({ title, content }) {
   function handleClick() {
     setShowMore(!showMore);
   }
-
-  // Check kind of content to display
-  // const elementType = typeOf(element);
-  // function getDisplayNameForReactElement()
 
   let typeOfContent = "";
 
@@ -29,17 +25,19 @@ export default function Accordion({ title, content }) {
   }
 
   return (
-    <div onClick={handleClick} className="accordion">
-      <div className="accordion__title-wrapper">
+    <div className="accordion">
+      <div onClick={handleClick} className="accordion__title-wrapper">
         <h3>{title}</h3>
         <img
           src={Arrow}
           className={`accordion__arrow ${showMore ? "active" : ""}`}
         />
       </div>
-      <div className={`accordion__details-wrapper ${showMore ? "open" : ""}`}>
-        {typeOfContent}
-      </div>
+      {showMore && (
+        <div className={`accordion__details-wrapper ${showMore ? "open" : ""}`}>
+          {typeOfContent}
+        </div>
+      )}
     </div>
   );
 }

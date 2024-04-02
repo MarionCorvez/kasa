@@ -1,10 +1,8 @@
 import { Link } from "react-router-dom";
-import { useState } from "react";
 import { useFetch } from "../../hooks/useFetch.jsx";
 
 export default function Gallery() {
-  const [url, setUrl] = useState("../../data/data.json");
-  const { data, isPending, error } = useFetch(url);
+  const { data, isPending, error } = useFetch("/data/data.json");
 
   return (
     <section className="gallery">

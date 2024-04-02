@@ -102,13 +102,13 @@ img::after {
 @font-face {
   font-family: "Montserrat-Medium";
   font-weight: 400;
-  src: local("Montserrat-Medium"), url("../assets/fonts/Montserrat-Medium.ttf");
+  src: local("Montserrat-Medium"), url("../fonts/Montserrat-Medium.ttf");
   font-display: swap;
 }
 @font-face {
   font-family: "Montserrat-Bold";
   font-weight: 700;
-  src: local("Montserrat-Bold"), url("../assets/fonts/Montserrat-Bold.ttf");
+  src: local("Montserrat-Bold"), url("../fonts/Montserrat-Bold.ttf");
   font-display: swap;
 }
 body {
@@ -126,18 +126,6 @@ body {
   text-align: center;
 }
 
-/*
-  ========================================
-  $Base
-  ========================================
-*/
-/*
-  ========================================
-  $Animations
-  ========================================
-*/
-/* $Variables
-   ==================================== */
 /*
   ========================================
   $Header
@@ -312,6 +300,7 @@ body {
   }
 }
 .house__title {
+  max-width: 500px;
   font-size: var(--f-size-l);
   color: #ff6060;
 }
@@ -340,17 +329,24 @@ body {
 }
 .house__star {
   max-width: clamp(13px, 1.25em, 25px);
-  margin: clamp(6px, 0.4em, 10px);
+  margin-right: clamp(6px, 0.6em, 10px);
+}
+@media screen and (width >= 768px) {
+  .house__star {
+    margin-right: 0;
+    margin-left: clamp(6px, 0.6em, 10px);
+  }
 }
 .house__tags {
   display: flex;
+  flex-wrap: wrap;
   gap: 10px;
   padding: clamp(10px, 1.5em, 20px) 0;
 }
 .house__tag {
-  width: 115px;
+  min-width: 115px;
   border-radius: 10px;
-  padding: 5px;
+  padding: 5px 10px;
   font-size: var(--f-size-xs);
   font-weight: 700;
   text-align: center;

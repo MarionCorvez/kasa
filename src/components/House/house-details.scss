@@ -36,6 +36,7 @@
   }
 
   &__title {
+    max-width: 500px;
     font-size: var(--f-size-l);
     color: a.$red;
   }
@@ -67,18 +68,23 @@
   }
   &__star {
     max-width: clamp(13px, 1.25em, 25px);
-    margin: clamp(6px, 0.4em, 10px);
+    margin-right: clamp(6px, 0.6em, 10px);
+    @include a.bp(medium) {
+      margin-right: 0;
+      margin-left: clamp(6px, 0.6em, 10px);
+    }
   }
 
   &__tags {
     display: flex;
+    flex-wrap: wrap;
     gap: 10px;
     padding: clamp(10px, 1.5em, 20px) 0;
   }
   &__tag {
-    width: 115px;
+    min-width: 115px;
     border-radius: 10px;
-    padding: 5px;
+    padding: 5px 10px;
     font-size: var(--f-size-xs);
     font-weight: 700;
     text-align: center;
