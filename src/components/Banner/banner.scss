@@ -11,7 +11,8 @@
   &__image {
     height: clamp(111px, 9.5em, 223px);
     border-radius: 25px;
-    filter: brightness(70%);
+    filter: brightness(45%);
+    box-shadow: 0 4px 4px #f6f6f6;
   }
 
   &__heading {

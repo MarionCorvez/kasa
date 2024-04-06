@@ -1,3 +1,3 @@
-export default function BannerImage(props) {
-  return <img src={props.src} className="banner__image" alt={props.altText} />;
+export default function BannerImage({ src, altText }) {
+  return <img src={src} className="banner__image" alt={altText} />;
 }

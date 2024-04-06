@@ -7,26 +7,34 @@ export default function Slider({ item }) {
   const hasNext = index < item.pictures.length - 1;
   const hasSeveral = item.pictures.length > 1;
 
-  function handlePrevClick() {
+  /*   function handlePrevClick() {
     if (hasPrev) {
       setIndex(index - 1);
     } else {
       setIndex(item.pictures.length - 1);
     }
+  } */
+
+  function handlePrevClick() {
+    hasPrev ? setIndex(index - 1) : setIndex(item.pictures.length - 1);
   }
 
-  function handleNextClick() {
+  /*   function handleNextClick() {
     if (hasNext) {
       setIndex(index + 1);
     } else {
       setIndex(0);
     }
   }
+ */
+  function handleNextClick() {
+    hasNext ? setIndex(index + 1) : setIndex(0);
+  }
 
   let picture = item.pictures[index];
 
   return (
-    <section key={item.pictures.length} className="slider">
+    <section key={index} className="slider">
       <img src={picture} className="slider__picture" />
       {hasSeveral && (
         <>

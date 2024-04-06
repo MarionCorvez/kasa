@@ -29,6 +29,7 @@ Avec plus de 500 annonces postées chaque jour, Kasa fait partie des leaders de 
 8. [x] Étape 8 : Création du carrousel de la page de logement
 9. [x] Étape 9 : Finalisation de la page de logement
 10. [x] Étape 10 : Vérification de l'ensemble du site
+11. [x] Étape 11 : Ajustements, correctifs et optimisations
 
 ## Objectifs pédagogiques
 
